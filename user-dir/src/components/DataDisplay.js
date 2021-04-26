@@ -63,13 +63,13 @@ class DataDisplay extends Component {
     let isEditing = this.props.isEditing;
 
     return (
-      <div>
-        <div>
+      <div className="card">
+        <div className="position">
           <span>
             {this.props.currentIndex + 1}/{data.length}
           </span>
         </div>
-        <div>
+        <div className="username">
           <span>
             {isEditing ? (
               <input
@@ -93,10 +93,10 @@ class DataDisplay extends Component {
             )}
           </span>
         </div>
-        <div>
-          From:{" "}
-          <span>
-            {" "}
+
+        <div className="user-info">
+          <div>
+            <strong>From:</strong>{" "}
             {isEditing ? (
               <input
                 value={this.state.city}
@@ -106,9 +106,6 @@ class DataDisplay extends Component {
               currentUser.city
             )}
             ,{" "}
-          </span>
-          <span>
-            {" "}
             {isEditing ? (
               <input
                 value={this.state.country}
@@ -119,35 +116,38 @@ class DataDisplay extends Component {
             ) : (
               currentUser.country
             )}
-          </span>
+          </div>
+          <div>
+            <strong>Job Title:</strong>{" "}
+            {isEditing ? (
+              <input
+                value={this.state.title}
+                onChange={(e) =>
+                  this.handleInputChange("title", e.target.value)
+                }
+              ></input>
+            ) : (
+              currentUser.title
+            )}
+            ,{" "}
+          </div>
+          <div>
+            <strong>Employer:</strong>{" "}
+            {isEditing ? (
+              <input
+                value={this.state.employer}
+                onChange={(e) =>
+                  this.handleInputChange("employer", e.target.value)
+                }
+              ></input>
+            ) : (
+              currentUser.employer
+            )}
+          </div>
         </div>
-        <div>
-          Job Title:{" "}
-          {isEditing ? (
-            <input
-              value={this.state.title}
-              onChange={(e) => this.handleInputChange("title", e.target.value)}
-            ></input>
-          ) : (
-            currentUser.title
-          )}
-          ,{" "}
-        </div>
-        <div>
-          Employer:{" "}
-          {isEditing ? (
-            <input
-              value={this.state.employer}
-              onChange={(e) =>
-                this.handleInputChange("employer", e.target.value)
-              }
-            ></input>
-          ) : (
-            currentUser.employer
-          )}
-        </div>
-        <div>
-          Favorite Movies:{" "}
+
+        <div className="favorites">
+          <strong>Favorite Movies:</strong>{" "}
           <ol>
             <li>
               {isEditing ? (

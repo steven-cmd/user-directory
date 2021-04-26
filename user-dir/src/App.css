@@ -1,1 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+button {
+  color: white;
+  border: none;
+}
+
+.header {
+  background-color: dodgerblue;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10vw;
+}
+
+.header > span {
+  font-size: large;
+  font-weight: 900;
+}
+
+.card-container {
+  width: 70vw;
+  min-width: 600px;
+}
+
+.card {
+  background-color: white;
+  padding-left: 50px;
+  padding-bottom: 100px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navButton {
+  background-color: black;
+  font-weight: 900;
+  font-size: large;
+}
+
+.changeButton {
+  background-color: dodgerblue;
+  font-weight: 900;
+  font-size: large;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.position {
+  align-self: flex-end;
+  font-weight: 900;
+  margin: 10px;
+  font-size: x-large;
+}
+
+.username {
+  border-bottom: 3px solid dodgerblue;
+  font-weight: 900;
+  margin-bottom: 30px;
+  font-size: x-large;
+}
+
+.user-info {
+  padding-bottom: 20px;
+}
+
+.user-info > div {
+  padding-bottom: 10px;
+}
+
+ol {
+  padding-top: 5px;
+  padding-left: 60px;
+  margin-bottom: 10px;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+.card > button {
+  background-color: dodgerblue;
+  font-weight: 900;
+  font-size: large;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: -53px;
+}

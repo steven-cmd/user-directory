@@ -79,21 +79,24 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Heading></Heading>
-        <DataDisplay
-          currentIndex={this.state.index}
-          isEditing={this.state.isEditing}
-          save={this.handleSave}
-        ></DataDisplay>
-        <Navigation
-          isEditing={this.state.isEditing}
-          next={this.handleNext}
-          prev={this.handlePrevious}
-          del={this.handleDelete}
-          new={this.handleNew}
-          edit={this.handleEdit}
-        ></Navigation>
+
+        <div class="card-container">
+          <DataDisplay
+            currentIndex={this.state.index}
+            isEditing={this.state.isEditing}
+            save={this.handleSave}
+          ></DataDisplay>
+          <Navigation
+            isEditing={this.state.isEditing}
+            next={this.handleNext}
+            prev={this.handlePrevious}
+            del={this.handleDelete}
+            new={this.handleNew}
+            edit={this.handleEdit}
+          ></Navigation>
+        </div>
       </div>
     );
   }

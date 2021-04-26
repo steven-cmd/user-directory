@@ -9,12 +9,26 @@ class Navigation extends Component {
     let isEditing = this.props.isEditing;
 
     return (
-      <div>
-        <button onClick={this.props.prev}>Previous</button>
-        <button onClick={this.props.edit}>Edit</button>
-        <button onClick={this.props.del}>Delete</button>
-        <button onClick={this.props.new}>New</button>
-        <button onClick={this.props.next}>Next</button>
+      <div class="navbar">
+        <button className="navButton" onClick={this.props.prev}>
+          &lt; Previous
+        </button>
+
+        <div>
+          <button className="changeButton" onClick={this.props.edit}>
+            Edit
+          </button>
+          <button className="changeButton" onClick={this.props.del}>
+            Delete
+          </button>
+          <button className="changeButton" onClick={this.props.new}>
+            New
+          </button>
+        </div>
+
+        <button className="navButton" onClick={this.props.next}>
+          Next &gt;
+        </button>
       </div>
     );
   }
